@@ -480,3 +480,65 @@ Security Analysis, Test and Evaluation
 This task will carry out the necessary analysis, testing and evaluation of the security
 mechanisms for Glenna.
 
+Glenna, as so far described, aims at federating access to the resoruces of cloud service providers in the nordic countries. One of the challenges we have faced when it comes to security is enaging the stake holders to make a detailed security analysis or test of the cloud infrastructure in their premise. Even though security is an important aspect of IT service provisioning, getting enough resource to satisfy security requirements is usually a difficult matter. When it comes to such colboration projects the problem gets more harder. We have chosen two methods to deal with this challenge. 
+
+1. Prepared a security questionnaire to collect important information about the security state in the cloud service providers
+2. Identified the most likely security attacks to cloud infrastructures in general. Then we extracted control measures for the highly likely problems from the Cloud Control Matrix (CCM) published by Cloud Security Alliance (CSA). Cloud service providers can also do prioretization among the top threats and focus on the crticial ones based on their service type and user base.
+
+These two tasks helped us to get information about the state of security (to some extent) at the cloud service providers in Glenna and to identify risks that can possibly be a threat for them. The questionnare was completed by two cloud service providers CSC (on behalf of C-pouta cloud project) and DEIC (on behalf of Data.DEIC project). We haven´t got response from SNIC, Sweden and UH-IaaS, Norway. At the time of this writting, UH-IaaS is still in the pilot stage to make it difficult to give valid and correct answer as things may change in the due course of the project towards production phase. 
+
+Note: The questionnaire and the response we get from two of the respondents is attached in the Glenna project wiki. 
+
+Apart from the questionnaire, we have also made high level risk analysis based on common security threats in clouds and the nature of cloud service provision with in the cloud service providers in Glenna. For that we have chooses state of the art work from Cloud Security Alliance (CSA) in security in cloud computing. CSA is one of the leading organizations that are working towards secure and resilient cloud services for organizations and for individual users that use cloud services in their day-to-day activities. The activities of CSA include guiding cloud service providers to offer their services and solutions in a way that is compliant to different international and local standards and at the same time satisfy additional needs of cloud service customers and users. 
+
+One of the working groups at CSA produced “Cloud Control Matrix (CCM)” which is specifically designed to provide fundamental security principles to guide cloud vendors and to assist prospective cloud customers in assessing the overall security risk of a cloud provider []. This makes it a potential input for Glenna which involves stakeholders that are both cloud vendors as well as customers. One of the most useful aspects of the CCM is that it is mapped to many other major industry standards, controls and frameworks [] -  
+
+-	HIPAA and HITECH Act
+-	ISO/IEC 27001-2005
+-	NIST SP800-53 R3
+-  PCI DSS 2.0
+-	Generally Accepted Privacy Principles, or GAPP
+-	Jericho Forum
+-	FedRAMP
+
+Based on the work of CSA and their documentation, one can easily map a given control from CCM to the controls of all of the above standards and frameworks. The CCM gives a detailed explanation of security concepts and principles by categorizing them in groups. The first version of CCM (V1.1) was published in 2010 and it comprises 98 controls within 10 groups. The last version of CCM (V.3.0.1), which is published in 2014, comprises 133 controls grouped under 16 domains. The domains cover a large variety of security principles and concepts that can address security related issues in cloud computing. 
+
+1.	Application and Interface Security (AIS)
+2.	Audit Assurance and Compliance (AAC)
+3.	Business Continuity and Management and Operational Resilience (BCR)
+4.	Change Control and Configuration Management (CCM)
+5.	Data Security and Information Lifecycle Management (DSI)
+6.	Datacenter Security (DSC)
+7.	Encryption and Key Management (EKM)
+8.	Governance and Risk Management (GRM)
+9.	Human Resource Security (HRS)
+10.	Identity and Access Management (IAM)
+11.	Infrastructure and Virtualization (IVS)
+12.	Interoperability and Portability (IPY)
+13.	Mobile Security (MOS)
+14.	Security Incident Management, E-Disc and Cloud Forensics (SEF)
+15.	Supply Chain Management, Transparency and Accountability (STA)
+16.	Threat and Vulnerability Management (TVM) 
+
+Identifying Required Controls 
+*****************************
+
+The higher number of controls included in CCM makes it applicable in various cloud service provisions and application domains. For cloud service providers, it´s not a requirement to comply with all the controls and it might not also be feasible. But one can find applicable controls based on the security needs and risks associated with the service in question. One approach to identify the required controls is using Consensus Assessments Initiative Questionnaire (CAIQ). The CAIQ is a set of questions a cloud consumer and cloud auditor may wish to ask of a cloud provider. It provides a series of “yes” or “no” controls assertion questions, which can then be tailored to suit each unique cloud customer´s evidentiary requirements []. 
+
+To extract the controls from the CCM that can be applied in Glenna we first identify the highest treats in cloud infrastructure. The CSA has identified “The Notorious Nine: Cloud Computing Top Threats” in 2013 and also gave suggestions on which cloud controls to use to  mitigate with these common and critical threats. This approach can help us address the common security issues that shall arise on the cloud infrastructures of the cloud service providers within Glenna.
+The Notorious Nine Cloud Computing Top Threats are [] –
+
+1.	Data Breaches
+2.	Data Loss
+3.	Account Hijacking
+4.	Insecure APIs 
+5.	Denial of Service
+6.	Malicious Insiders
+7.	Abuse of Cloud Services
+8.	Insufficient Due Diligence
+9.	Shared Technology Issues
+
+These are the top threats that materialized on cloud infrastructures and satisfying or implementing controls against these threats can help to secure a cloud infrastructure from future similar and potential incidents or attacks. 
+The controls for each threat are identified from the CCM V 1.0. At the time of the publication of the top threats, the available CCM version was V 1.0 and CSA has suggested controls from the list in that version. Currently the latest CCM version (V 3.0.1) is released and in order to entertain these latest measures in Glenna project, we made mapping of those controls from V 1.0  to the controls in CCM version 3.0.1. Accordingly, we identified 72 total controls from 12 domains to mitigate the top 9 cloud threats; of which 42 controls are unique. A detailed documentation about how the mapping is done and which controls can help the cloud service providers to mitigate the top cloud threats is attached in the Glenna wiki page.
+
+Note: Each control in the CCM is identified by a unique ID that comprises the category of the control and a number. For instance Identity & Access Management controls are identified by IAM followed by a number (e.g. IAM-01). In the following section we listed the top nine cloud computing threats and the controls that are suggested for each threat. For ease of reference we put the ID of the control from v 3.0.1 followed by the id of a similar control in the previous version, which is put in bracket.  
